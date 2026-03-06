@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { PhoneCall, Mail, MapPin, Send, Clock } from "lucide-react";
+import { PhoneCall, Mail, MapPin, Send, Clock, Instagram } from "lucide-react";
 
 export const Contact = () => {
     const [formData, setFormData] = useState({
@@ -97,28 +97,46 @@ export const Contact = () => {
 
                         <div className="grid gap-8">
                             {[
-                                { icon: PhoneCall, label: "Telefone e Whatsapp", value: "(21) 98531-6276" },
-                                { icon: Mail, label: "E-mail Profissional", value: "contato@chsanches.adv.br" },
+                                { icon: PhoneCall, label: "Telefone e Whatsapp", value: "(21) 98531-6276", href: "https://wa.me/5521985316276" },
+                                { icon: Mail, label: "E-mail Profissional", value: "contato@chsanches.adv.br", href: "mailto:contato@chsanches.adv.br" },
+                                { icon: Instagram, label: "Instagram", value: "@carlossanchesadv", href: "https://instagram.com/carlossanchesadv" },
                                 { icon: Clock, label: "Horário de Funcionamento", value: "Segunda a Sexta, das 09h às 18h" },
-                                { icon: MapPin, label: "Unidade Rio de Janeiro", value: "Avenida Marechal Câmara, 160, Edifício Orly, Sala 1107, Centro - RJ" }
-                            ].map((item, idx) => (
-                                <motion.div
-                                    key={idx}
-                                    initial={{ opacity: 0, y: 10 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: idx * 0.1 }}
-                                    viewport={{ once: true }}
-                                    className="flex items-center gap-8 group"
-                                >
-                                    <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-white text-accent shadow-premium border border-primary/5 transition-all group-hover:bg-primary group-hover:text-white group-hover:shadow-accent-glow">
-                                        <item.icon className="w-7 h-7" />
-                                    </div>
-                                    <div>
-                                        <p className="text-[10px] font-black uppercase tracking-widest text-accent mb-2">{item.label}</p>
-                                        <p className="text-xl font-black text-primary tracking-tight">{item.value}</p>
-                                    </div>
-                                </motion.div>
-                            ))}
+                                { icon: MapPin, label: "Unidade Rio de Janeiro", value: "Avenida Marechal Câmara, 160, Edifício Orly, Sala 1107, Centro - RJ", href: "https://www.google.com/maps/place/Av.+Mal.+C%C3%A2mara,+160+-+Centro,+Rio+de+Janeiro+-+RJ,+20021-380" }
+                            ].map((item, idx) => {
+                                const Content = (
+                                    <>
+                                        <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-white text-accent shadow-premium border border-primary/5 transition-all group-hover:bg-primary group-hover:text-white group-hover:shadow-accent-glow">
+                                            <item.icon className="w-7 h-7" />
+                                        </div>
+                                        <div>
+                                            <p className="text-[10px] font-black uppercase tracking-widest text-accent mb-2">{item.label}</p>
+                                            <p className="text-xl font-black text-primary tracking-tight">{item.value}</p>
+                                        </div>
+                                    </>
+                                );
+
+                                const className = "flex items-center gap-8 group";
+
+                                return (
+                                    <motion.div
+                                        key={idx}
+                                        initial={{ opacity: 0, y: 10 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: idx * 0.1 }}
+                                        viewport={{ once: true }}
+                                    >
+                                        {item.href ? (
+                                            <a href={item.href} target="_blank" rel="noopener noreferrer" className={className}>
+                                                {Content}
+                                            </a>
+                                        ) : (
+                                            <div className={className}>
+                                                {Content}
+                                            </div>
+                                        )}
+                                    </motion.div>
+                                );
+                            })}
                         </div>
 
                         <motion.div

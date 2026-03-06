@@ -21,12 +21,18 @@ export const Hero = () => {
                                 <span className="h-2 w-2 rounded-full bg-accent animate-pulse" />
                                 <span className="text-[10px] font-black tracking-[0.25em] text-accent uppercase">Experiência Jurídica Comprovada</span>
                             </div>
-                            <h1 className="text-[2.1rem] font-black leading-[1.1] text-primary lg:text-[3.15rem] xl:text-[4.2rem]">
-                                Atuação <span className="text-accent italic font-serif">Estratégica</span> na Defesa dos Seus Direitos.
+                            <h1 className="text-[1.5rem] font-black leading-[1.1] text-primary lg:text-[2.2rem] xl:text-[2.95rem]">
+                                Dr. Carlos Sanches advogado atuante no{" "}
+                                <span className="text-accent italic font-serif">Direito Cível e do Consumidor.</span>
                             </h1>
-                            <p className="max-w-xl text-lg leading-relaxed text-body-text/70 font-medium whitespace-pre-line">
-                                Nossa atuação vai além da técnica jurídica: construímos estratégias personalizadas para proteger sua história e seu patrimônio. Atuamos nas áreas Cível, Consumidor e Extrajudicial com foco em resultados concretos.
-                            </p>
+                            <div className="flex flex-col gap-4">
+                                <p className="max-w-xl text-lg leading-relaxed text-body-text/80 font-medium">
+                                    Se você teve problemas com empresas, cobranças indevidas, negativação injusta ou prejuízos financeiros, contar com um advogado experiente pode ser essencial para proteger seus direitos.
+                                </p>
+                                <p className="max-w-xl text-lg leading-relaxed text-body-text/80 font-medium">
+                                    Atuamos na defesa do consumidor e na resolução de conflitos cíveis, oferecendo estratégias jurídicas personalizadas para cada caso, com o objetivo de buscar soluções eficazes, seguras e juridicamente sólidas.
+                                </p>
+                            </div>
                         </div>
                         <div className="flex flex-col gap-4 sm:flex-row">
                             <a href="#contato" id="hero-cta-button" className="btn-primary text-center flex items-center justify-center">
@@ -44,14 +50,13 @@ export const Hero = () => {
                         transition={{ duration: 1, ease: "easeOut" }}
                         className="relative order-1 lg:order-2 perspective-1000"
                     >
-                        <div className="aspect-[4/5] w-full max-w-[450px] mx-auto overflow-hidden rounded-[2.5rem] bg-primary/5 shadow-hero border border-white/40 group hover:shadow-hero-hover transition-all duration-500">
+                        <div className="aspect-[4/5] w-full max-w-[450px] mx-auto overflow-hidden rounded-[2.5rem] bg-primary/5 shadow-hero border border-white/40 group transition-all duration-500">
                             <img
                                 alt="Dr. Carlos Sanches"
                                 className="h-full w-full object-cover grayscale-[15%] contrast-[110%] group-hover:scale-105 group-hover:grayscale-0 transition-all duration-700"
                                 src="/eu.jpg"
                                 referrerPolicy="no-referrer"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                         </div>
 
                         <motion.div
