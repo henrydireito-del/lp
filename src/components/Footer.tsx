@@ -10,9 +10,9 @@ export const Footer = () => {
                     <div className="lg:col-span-2">
                         <div className="flex items-center gap-4 mb-10">
                             <img
-                                src="/Logofb.png"
+                                src="./Logo.png"
                                 alt="Carlos Sanches Advocacia"
-                                className="h-14 w-auto object-contain"
+                                className="h-12 w-auto object-contain filter brightness-0 invert opacity-90 transition-opacity hover:opacity-100"
                             />
                             <div className="flex flex-col leading-tight">
                                 <h2 className="text-2xl font-black tracking-tighter uppercase">

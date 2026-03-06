@@ -14,10 +14,9 @@ export const About = () => {
                             className="aspect-square overflow-hidden rounded-[3rem] shadow-premium ring-1 ring-primary/5 group"
                         >
                             <img
-                                alt="Dr. Carlos Sanches"
-                                className="h-full w-full object-cover grayscale-[5%] contrast-[105%] transition-transform duration-700 group-hover:scale-105"
-                                src="/eu2.jpeg"
-                                referrerPolicy="no-referrer"
+                                alt="Dr. Carlos Sanches em atuação"
+                                className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                                src="./eu.jpg"
                             />
                         </motion.div>
                         <motion.div

@@ -22,7 +22,7 @@ export const Hero = () => {
                                 <span className="text-[10px] font-black tracking-[0.25em] text-accent uppercase">Experiência Jurídica Comprovada</span>
                             </div>
                             <h1 className="text-[1.5rem] font-black leading-[1.1] text-primary lg:text-[2.2rem] xl:text-[2.95rem]">
-                                Dr. Carlos Sanches advogado atuante no{" "}
+                                <span className="text-accent">Dr. Carlos Sanches</span> advogado atuante na área do{" "}
                                 <span className="text-accent italic font-serif">Direito Cível e do Consumidor.</span>
                             </h1>
                             <div className="flex flex-col gap-4">
@@ -54,7 +54,7 @@ export const Hero = () => {
                             <img
                                 alt="Dr. Carlos Sanches"
                                 className="h-full w-full object-cover grayscale-[15%] contrast-[110%] group-hover:scale-105 group-hover:grayscale-0 transition-all duration-700"
-                                src="/eu.jpg"
+                                src="./eu.jpg"
                                 referrerPolicy="no-referrer"
                             />
                         </div>

@@ -11,9 +11,9 @@ export const Header = () => {
             <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
                 <div className="flex items-center gap-4">
                     <img
-                        src="/Logofb.png"
+                        src="./Logo.png"
                         alt="Carlos Sanches Advocacia"
-                        className="h-12 w-auto object-contain"
+                        className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
                     />
                     <div className="flex flex-col leading-tight">
                         <h2 className="text-xl font-black tracking-tighter uppercase text-background-light">
